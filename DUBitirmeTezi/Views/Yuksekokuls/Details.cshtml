@@ -1,0 +1,23 @@
+﻿@model DUBitirmeTezi.Models.Akademik.Yuksekokul
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_admin.cshtml";
+}
+
+
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CollageName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CollageName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

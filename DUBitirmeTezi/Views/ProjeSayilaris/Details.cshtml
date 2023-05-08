@@ -1,0 +1,102 @@
+﻿@model DUBitirmeTezi.Models.Anasayfa.ProjeSayilari
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_admin.cshtml";
+}
+
+<h1>Anasayfa Bilgileri</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Baslik)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Baslik)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Aciklama)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fakulte)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fakulte)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Enstitu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Enstitu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Yuksekokul)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Yuksekokul)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MeslekYuksekokulu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MeslekYuksekokulu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LisansProgrami)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LisansProgrami)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LisansutsuProgrami)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LisansutsuProgrami)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UygulamaArastirmaMerkezi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UygulamaArastirmaMerkezi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Koordinatorluk)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Koordinatorluk)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BapProjesi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BapProjesi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Patent)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Patent)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SponsorluProje)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SponsorluProje)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TubitakProjesi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TubitakProjesi)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

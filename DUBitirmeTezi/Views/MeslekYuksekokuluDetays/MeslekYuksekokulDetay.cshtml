@@ -1,0 +1,24 @@
+﻿@model IEnumerable<DUBitirmeTezi.Models.Akademik.MeslekYuksekokulDetay>
+
+@{
+    ViewData["Title"] = "Meslek YuksekokuluDetay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("_sayfaBaslik")
+@Html.Partial("_meslekYuksekokuluDetay")
+
+
+@*<div class="container">
+    @foreach (var item in Model)
+    {
+        <h5 style="color:darkblue">@item.MeslekYuksekokulu.TechnicalSchoolName</h5>
+        <br />
+
+        <p>@item.Description1</p>
+        <br />
+        <p>@item.Description2</p>
+        <br />
+    }
+
+</div>*@

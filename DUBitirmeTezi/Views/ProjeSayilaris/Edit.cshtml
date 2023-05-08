@@ -1,0 +1,91 @@
+﻿@model DUBitirmeTezi.Models.Anasayfa.ProjeSayilari
+
+@{
+    ViewData["Title"] = "Düzenle";
+    Layout = "~/Views/Shared/_admin.cshtml";
+}
+
+
+<h4>Anasayfa Verileri</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Baslik" class="control-label"></label>
+                <input asp-for="Baslik" class="form-control" />
+                <span asp-validation-for="Baslik" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Aciklama" class="control-label"></label>
+                <input asp-for="Aciklama" class="form-control" />
+                <span asp-validation-for="Aciklama" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fakulte" class="control-label"></label>
+                <input asp-for="Fakulte" class="form-control" />
+                <span asp-validation-for="Fakulte" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enstitu" class="control-label"></label>
+                <input asp-for="Enstitu" class="form-control" />
+                <span asp-validation-for="Enstitu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Yuksekokul" class="control-label"></label>
+                <input asp-for="Yuksekokul" class="form-control" />
+                <span asp-validation-for="Yuksekokul" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MeslekYuksekokulu" class="control-label"></label>
+                <input asp-for="MeslekYuksekokulu" class="form-control" />
+                <span asp-validation-for="MeslekYuksekokulu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LisansProgrami" class="control-label"></label>
+                <input asp-for="LisansProgrami" class="form-control" />
+                <span asp-validation-for="LisansProgrami" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LisansutsuProgrami" class="control-label"></label>
+                <input asp-for="LisansutsuProgrami" class="form-control" />
+                <span asp-validation-for="LisansutsuProgrami" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UygulamaArastirmaMerkezi" class="control-label"></label>
+                <input asp-for="UygulamaArastirmaMerkezi" class="form-control" />
+                <span asp-validation-for="UygulamaArastirmaMerkezi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Koordinatorluk" class="control-label"></label>
+                <input asp-for="Koordinatorluk" class="form-control" />
+                <span asp-validation-for="Koordinatorluk" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BapProjesi" class="control-label"></label>
+                <input asp-for="BapProjesi" class="form-control" />
+                <span asp-validation-for="BapProjesi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Patent" class="control-label"></label>
+                <input asp-for="Patent" class="form-control" />
+                <span asp-validation-for="Patent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SponsorluProje" class="control-label"></label>
+                <input asp-for="SponsorluProje" class="form-control" />
+                <span asp-validation-for="SponsorluProje" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TubitakProjesi" class="control-label"></label>
+                <input asp-for="TubitakProjesi" class="form-control" />
+                <span asp-validation-for="TubitakProjesi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

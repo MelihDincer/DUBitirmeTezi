@@ -1,0 +1,29 @@
+﻿@model DUBitirmeTezi.Models.Duyurular
+
+@{
+    ViewData["Title"] = "Duyuru Detay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("_sayfaBaslik")
+
+
+<section class="events">
+    <div class="wrapper flex container">
+        <div class="content">
+            <div class="event-container">
+                <small class="event-date">@Html.DisplayFor(model => model.EklendigiTarih)</small>
+                <h2 class="event-title">@Html.DisplayFor(model => model.DuyuruAdi)</h2>
+                <div class="event-content">
+                    <p>
+                        <img src="@Model.Url">
+                    </p>
+                    <p style="font-size:22px">
+                        @Html.DisplayFor(model => model.Aciklama1)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<DUBitirmeTezi.Models.Universitemiz.FotografGalerisi>
+
+@{
+    ViewData["Title"] = "Fotograf Galerisi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("_sayfaBaslik")
+
+<section class="units">
+    <div class="wrapper flex container">
+        <div class="content" style="width: 100%;">
+            <div class="unit-container">
+                <h2 class="unit-title">Tanıtım Filmleri/Fotoğraf Galerisi</h2>
+                <hr />
+                <br />
+
+
+
+                <div class="unit-content">
+                    <p>
+                        @foreach (var item in Model)
+                        {
+                            <img src="@item.Url"> <br><br>
+                        }
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+

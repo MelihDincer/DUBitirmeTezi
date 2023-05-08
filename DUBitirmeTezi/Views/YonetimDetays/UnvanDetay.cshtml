@@ -1,0 +1,33 @@
+﻿@model IEnumerable<DUBitirmeTezi.Models.Universitemiz.YonetimDetay>
+
+@{
+    ViewData["Title"] = "UnvanDetay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("_sayfaBaslik")
+
+
+@foreach (var item in Model)
+{
+    <section class="units">
+        <div class="wrapper flex container">
+            <div class="content" style="width: 100%;">
+                <div class="unit-container">
+                    <h2 class="unit-title">@item.YonetimTable.Unvan</h2>
+
+                    <div class="unit-content">
+                        <p style="font-weight: 400; text-align: center;">
+                            <img src="@item.Url" data-filename="Res" style="width: 640px;">
+                            <br>
+                            @item.Name Kimdir?
+                        </p>
+                        <p style="font-weight: 400;">
+                            @item.Description
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}

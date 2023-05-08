@@ -1,0 +1,32 @@
+﻿@model IEnumerable<DUBitirmeTezi.Models.Akademik.FakulteDetay>
+
+@{
+    ViewData["Title"] = "Bölumler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("_sayfaBaslik")
+
+<section class="units">
+    <div class="wrapper flex container">
+        <div class="content" style="text-align:center; width: 100%;font-size:40px">
+            <div class="unit-container">
+                <h2 class="unit-title">Bölümler</h2>
+                <hr />
+                <br />
+                <br />
+                <div class="unit-content">
+                    @foreach (var item in Model)
+                    {
+                        <div style="font-size:20px;margin-bottom:30px; color:dodgerblue">
+                            <a asp-action="BolumDetay" asp-route-id="@item.Id">
+                                <p>@item.EducationName</p>
+                            </a>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

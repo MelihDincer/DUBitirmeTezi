@@ -1,0 +1,53 @@
+﻿@model IEnumerable<DUBitirmeTezi.Models.Universitemiz.YonetimDetay>
+
+@{
+    ViewData["Title"] = "Yönetim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("_sayfaBaslik")
+
+<section class="units">
+    <div class="wrapper flex container">
+        <div class="content" style="width: 100%;">
+            <div class="unit-container">
+                <h2 class="unit-title">Yönetim</h2>
+                <hr />
+                <br />
+                <br />
+                <div class="unit-content">
+                    <table class="table table-bordered" style="" width="1000">
+                        
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr>
+                                <td style="width: 333px; text-align: center; ">
+                                    <a asp-action="UnvanDetay" asp-route-id="@item.Id">
+                                        <p style="width: 310px; height: 190px; overflow: hidden; display: inline-block;">
+                                            <img style="width: 100%;" src="@item.Url" data-filename="Res">
+                                        </p>
+                                    </a>
+                                </td>
+                            </tr>
+                                <tr>
+                                    <td style="width: 333px; text-align: center;">
+                                        <a asp-action="UnvanDetay" asp-route-id="@item.Id">
+                                            <p>
+                                                @item.YonetimTable.Unvan
+                                            </p>
+                                        </a>
+                                    </td>
+                                </tr>
+                                
+                            }
+                        </tbody>
+
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>

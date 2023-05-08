@@ -1,0 +1,29 @@
+﻿@model IEnumerable<DUBitirmeTezi.Models.Akademik.EnstituDetay>
+
+@{
+    ViewData["Title"] = "EnstituDetay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("_sayfaBaslik")
+@Html.Partial("_enstituDetay")
+
+
+
+
+
+@*<div class="container">
+    @foreach (var item in Model)
+    {
+
+        <h5 style="color:darkblue">@item.Enstitu.EnstituName</h5>
+        <br />
+
+        <p>@item.Description</p>
+        <br />
+        <p>@item.Description2</p>
+        <br />
+
+
+    }
+</div>*@

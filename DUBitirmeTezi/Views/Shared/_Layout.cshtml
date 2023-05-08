@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Melih Dinçer</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/navbar.css" />
+    <link rel="stylesheet" href="~/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/animate.css" />
+    <link rel="stylesheet" href="~/css/layoutcss.css" />
+
+    <style>
+        body {
+            font-family: Georgia;
+            background-color: #F1F1F1;
+        }
+    </style>
+
+</head>
+<body>
+    <header class="du-header">
+        <div class="bar">
+            <div class="wrapper flex container top-bar">
+                <div class="bar-headline"><a href="/">Çevre ve Sağlık Alanında İhtisas Üniversitesi</a></div>
+                <nav>
+                    <ul class="nav dn">
+                        <li><a href="#">Personel</a></li>
+                        <li><a href="#">Öğrenci</a></li>
+                        <li><a href="#">Hastane</a></li>
+                        <li><a href="#">Teknopark</a></li>
+                        <li><a href="#" class="has-submenu">Hızlı Erişim</a></li>
+                        <li><a href="#">Sanat Galerisi</a></li>
+                        <li><a href="#">Mezunlar</a></li>
+                        <li>
+                            <a href="#">
+                                <img width="90" src="/Anasayfa/dukkan.png">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="head-bar">
+            <div class="wrapper flex container header-bar">
+                <div class="site-name dv">Düzce Üniversitesi</div>
+                <div class="local dn">
+                    <ul>
+                        <li>
+                            <a href="/change/tr">
+                                TR
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                EN
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="logo dn"><a href="/"><img src="/Anasayfa/logo.png" alt="Düzce Üniversitesi"></a></div>
+                <nav>
+                    <div class="navbar_navbar">
+                        <div class="navbar_dropdown">
+                            <button class="navbar_btn">
+                                <i style="font-style:normal">Üniversitemiz</i>
+                            </button>
+                            <div class="navbar_dropdown-content">
+
+                                <a style="color: black;" href="#">Düzce</a>
+                                <a style="color: black;" href="#">Kuruluş</a>
+                                <a class="nav-link text-dark" asp-controller="YonetimDetays" asp-action="Index" >Yönetim</a>
+                                <a class="nav-link text-dark" href="#">Sayılarla DÜ</a>
+                                <a class="nav-link text-dark" href="#">Sıralamalar</a>
+                                <a class="nav-link text-dark" href="#">İlkler</a>
+                                <a class="nav-link text-dark" href="#">Kurumsal Strateji</a>
+                                <a class="nav-link text-dark" href="#">İdari Birimler</a>
+                                <a class="nav-link text-dark" href="#">Kampüs Yaşamı</a>
+                                <a class="nav-link text-dark" href="#">İşbirlikleri</a>
+                                <a class="nav-link text-dark" asp-controller="FotografGalerisis" asp-action="Index">Fotoğraf Galerisi</a>
+                                <a class="nav-link text-dark" href="#">Yönetmelik ve Yönergeler</a>
+                                <a class="nav-link text-dark" href="#">Bilgi Güvenliği Politikamız</a>
+                            </div>
+                        </div>
+
+                        <div class="navbar_dropdown">
+                            <button class="navbar_btn">
+                                <i style="font-style:normal">Akademik</i>
+                            </button>
+                            <div class="navbar_dropdown-content">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="FakulteDetays" asp-action="Index">Fakulteler</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="EnstituDetays" asp-action="Index">Enstitüler</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="YuksekokulDetays" asp-action="Index">Yüksek Okullar</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="MeslekYuksekokuluDetays" asp-action="Index">Meslek Yüksek Okulları</a>
+
+
+                            </div>
+                        </div>
+
+                        <div class="navbar_dropdown">
+                            <button class="navbar_btn">
+                                <i style="font-style:normal">Araştırma</i>
+                            </button>
+                            <div class="navbar_dropdown-content">
+                                <a style="color: black;" href="#">Araştırma Merkezleri</a>
+                                <a style="color: black;" href="#">Laboratuvar Envanteri</a>
+                                <a style="color: black;" href="#">Yayınlar Projeler</a>
+                                <a style="color: black;" href="#">Hakemli Dergiler</a>
+                                <a style="color: black;" href="#">Teknoloji Transfer Ofisi</a>
+
+                            </div>
+                        </div>
+
+                        <div class="navbar_dropdown">
+                            <button class="navbar_btn">
+                                <i style="font-style:normal">İhtisaslaşma</i>
+                            </button>
+                            <div class="navbar_dropdown-content">
+                                <a style="color: black;" href="#">Program Kapsamı</a>
+                                <a style="color: black;" href="#">Tıbbi Bitki Yetiştiriciliği</a>
+                                <a style="color: black;" href="#">Ürünler/Markalar</a>
+                                <a style="color: black;" href="#">Geleneksel ve Tamamlayıcı Tıp Faaliyetleri</a>
+                                <a style="color: black;" href="#">Tarımsal Atıkların Geri Kazanımı Faaliyetleri</a>
+                                <a style="color: black;" href="#">Arıcılık / Arı Ürünleri</a>
+                                <a style="color: black;" href="#">Bilimsel Yayınlar</a>
+                                <a style="color: black;" href="#">İşbirlikleri</a>
+                                <a style="color: black;" href="#">Etkinlikler</a>
+
+                            </div>
+                        </div>
+
+                        <a class="navitem" href="#"><span class="text-primary">DÜ</span>Yayınlar</a>
+                        <a class="navitem" asp-controller="Duyurulars" asp-action="Index"><span class="text-primary">DÜ</span>Duyurular</a>
+                        <a class="navitem" asp-controller="Login" asp-action="GirisYap"><span class="text-primary">Giriş Yap</span></a>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+        @*<div id="mobileNav" class="wrapper flex container mobile-bar">
+            <nav>
+                <ul class="nav">
+                    <li id="toggleButton" class="toggle times"><a href="#"><i class="fa fa-times"></i></a></li>
+                    <li>
+                        <div class="local">
+                            <ul>
+                                <li><a href="#">TR</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="/fadd/universitemiz" target="_self" class="has-submenu">Üniversitemiz</a><ul class="submenu"><li><a href="/4930/duzce" target="_self">Düzce</a></li><li><a href="/80e0/kurulus" target="_self">Kuruluş</a></li><li><a href="/6c61/yonetim" target="_self" class="has-submenu">Yönetim</a><ul class="submenu"><li><a href="/1549/rektor" target="_self">Rektör</a></li><li><a href="/887a/rektor-yardimcilari" target="_self">Rektör Yardımcıları</a></li><li><a href="/fb9e/senato-kurulu" target="_self">Senato</a></li><li><a href="/0243/yonetim-kurulu" target="_self">Yönetim Kurulu</a></li><li><a href="/1f4a/genel-sekreter" target="_self">Genel Sekreter</a></li><li><a href="https://cdn.duzce.edu.tr/File/GetFile/03869186-84f4-4f6d-81e0-cbcc4412b10c" target="_self">Teşkilat Şeması</a></li><li><a href="http://kurulkararlari.duzce.edu.tr/Main/Goruntule" target="_self">Senato ve Yönetim Kurulu Kararları</a></li><li><a href="/6530/rektorlerimiz" target="_self">Rektörlerimiz</a></li></ul></li><li><a href="/b611/sayilarla-du" target="_self" class="has-submenu">Sayılarla DÜ</a><ul class="submenu"><li><a href="/65f2/ogrenci-sayilari" target="_self">Öğrenci Sayıları</a></li><li><a href="/09fd/personel-sayilari" target="_self">Personel Sayıları</a></li><li><a href="/1b75/bolum-ve-program-sayilari" target="_self">Bölüm ve Program Sayıları</a></li><li><a href="/8968/proje-sayilari" target="_self">Proje Sayıları</a></li><li><a href="/7d6e/fikri-mulkiyet" target="_self">Fikri Mülkiyet</a></li><li><a href="/3546/derslik" target="_self">Derslik</a></li><li><a href="/2a68/kapali-alan" target="_self">Kapalı Alan</a></li><li><a href="/ac27/universite-zleme-ve-degerlendirme-raporu" target="_blank">Üniversite İzleme ve Değerlendirme Raporu</a></li><li><a href="/1D12/butce-bilgileri" target="_self">Bütçe</a></li></ul></li><li><a href="/3611/siralamalar" target="_self" class="has-submenu">Sıralamalar</a><ul class="submenu"><li><a href="/b695/urap" target="_self">URAP</a></li><li><a href="/816b/the" target="_self">THE</a></li><li><a href="/8ea0/girisimcilik-endeksi" target="_self">Girişimcilik Endeksi</a></li><li><a href="/49f8/green-metric" target="_self">Green Metric</a></li><li><a href="/5000/nnovalig" target="_self">İnnovaLig</a></li></ul></li><li><a href="/a131/lkler" target="_self">İlkler</a></li><li><a href="/7396/kurumsal-strateji" target="_self" class="has-submenu">Kurumsal Strateji</a><ul class="submenu"><li><a href="/43E8/stratejik-plan-raporlari" target="_self">Stratejik Plan 2020-2024</a></li><li><a href="/1486/kalite-politikamiz" target="_self">Kalite Politikası</a></li><li><a href="/idari/surekliiyilestirme" target="_self">Sürekli İyileştirme</a></li><li><a href="/47bf/kurum-c-degerlendirme-raporlari" target="_self">KİDR</a></li><li><a href="/82a4/surdurulebilirlik-raporu" target="_self">Sürdürülebilirlik Raporu</a></li></ul></li><li><a href="/4d53/dari-birimler" target="_self">İdari Birimler</a></li><li><a href="/5854/kampus-yasami" target="_self" class="has-submenu">Kampüs Yaşamı</a><ul class="submenu"><li><a href="/ed37/beslenme-hizmetleri" target="_self">Yeme/İçme</a></li><li><a href="/2E00/spor-hizmetleri-birimi" target="_self">Spor Merkezleri</a></li><li><a href="/f075/ulasim" target="_self">Ulaşım</a></li><li><a href="/C25C/barinma" target="_self">Barınma</a></li></ul></li><li><a href="/c66b/protokol-mzalanan-firmalar" target="_self">İşbirlikleri</a></li><li><a href="/4e04/tanitim-filmlerifotograf-galerisi" target="_self">Tanıtım Filmleri/Fotoğraf Galerisi</a></li><li><a href="/df48/yonetmelik-ve-yonergeler" target="_self">Yönetmelik ve Yönergeler</a></li><li><a href="/idari/bilgiislem/a7e2/bgys-politikamiz" target="_self">Bilgi Güvenliği Politikamız</a></li></ul></li>
+                    <li><a href="/dc0f//akademik/" target="_self" class="has-submenu">Akademik</a><ul class="submenu"><li><a href="/6f31//akademik/fakulte/" target="_self" class="has-submenu">Fakülteler</a><ul class="submenu"><li><a href="/akademik/fakulte/asbf" target="_self">Akçakoca Bey Siyasal Bilgiler Fakültesi</a></li><li><a href="/akademik/fakulte/ef" target="_self">Eğitim Fakültesi</a></li><li><a href="/akademik/fakulte/fef" target="_self">Fen Edebiyat Fakültesi</a></li><li><a href="/akademik/fakulte/ilahiyat" target="_self">İlahiyat Fakültesi</a></li><li><a href="/akademik/fakulte/if" target="_self">İşletme Fakültesi</a></li><li><a href="/akademik/fakulte/mf" target="_self">Mühendislik Fakültesi</a></li><li><a href="/akademik/fakulte/of" target="_self">Orman Fakültesi</a></li><li><a href="/akademik/fakulte/sabf" target="_self">Sağlık Bilimleri Fakültesi</a></li><li><a href="/akademik/fakulte/stf" target="_self">Sanat,Tasarım ve MimarlıkFakültesi</a></li><li><a href="/akademik/fakulte/sbf" target="_self">Spor Bilimleri Fakültesi</a></li><li><a href="/akademik/fakulte/tip" target="_self">Tıp Fakültesi</a></li><li><a href="/akademik/fakulte/zf" target="_self">Ziraat Fakültesi</a></li></ul></li><li><a href="/5238//akademik/enstitu/" target="_self" class="has-submenu">Enstitüler</a><ul class="submenu"><li><a href="/akademik/enstitu/lee" target="_self">Lisansüstü Eğitim Enstitüsü</a></li><li><a href="/akademik/enstitu/gse" target="_self">Güzel Sanatlar Enstitüsü</a></li><li><a href="/akademik/enstitu/fbe" target="_self">Fen Bilimleri Enstitüsü</a></li><li><a href="/akademik/enstitu/sbe" target="_self">Sağlık Bilimleri Enstitüsü</a></li><li><a href="/akademik/enstitu/sobe" target="_self">Sosyal Bilimler Enstitüsü</a></li></ul></li><li><a href="/a78a//akademik/yuksekokul/" target="_self" class="has-submenu">Yüksekokullar</a><ul class="submenu"><li><a href="/akademik/yuksekokul/turizm" target="_self">Akçakoca Turizm İşl. ve O.Y.O.</a></li><li><a href="/akademik/yuksekokul/ydy" target="_self">Hakime ERCİYAS Yabancı Diller Yüksekokulu</a></li></ul></li><li><a href="/akademik/myo/" target="_self" class="has-submenu">Meslek Yüksekokulları</a><ul class="submenu"><li><a href="/akademik/myo/akmyo" target="_self">Akçakoca MYO</a></li><li><a href="/akademik/myo/cimyo" target="_self">Çilimli MYO</a></li><li><a href="/akademik/myo/dmyo" target="_self">Düzce MYO</a></li><li><a href="/akademik/myo/cumyo" target="_self">Dr. Engin PAK Cumayeri MYO</a></li><li><a href="/akademik/myo/golyaka" target="_self">Gölyaka MYO</a></li><li><a href="/akademik/myo/gumyo" target="_self">Gümüşova MYO</a></li><li><a href="/akademik/myo/kmyo" target="_self">Kaynaşlı MYO</a></li><li><a href="/akademik/myo/ormyo" target="_self">Ormancılık MYO</a></li><li><a href="/akademik/myo/shmyo" target="_self">Sağlık Hizmetleri MYO</a></li><li><a href="/akademik/myo/sbmyo" target="_self">Sosyal Bilimler MYO</a></li></ul></li><li><a href="/51b3/kurullar" target="_self">Kurullar</a></li><li><a href="/3ea3/bolum-baskanliklari" target="_self" class="has-submenu">Bölüm Başkanlıkları</a><ul class="submenu"><li><a href="/akademik/bolum/ataturkilkeleri" target="_self">Atatürk İlkeleri ve İnkılap Tarihi Bölümü</a></li><li><a href="/akademik/bolum/turkdili" target="_self">Türk Dili</a></li></ul></li></ul></li>
+                    <li><a href="/c6b4/arastirma" target="_self" class="has-submenu">Araştırma</a><ul class="submenu"><li><a href="/eb86/arastirma-merkezleri" target="_self">Araştırma Merkezleri</a></li><li><a href="https://cdn.duzce.edu.tr/File/GetFile/d834bcb6-f351-49f7-98d2-b8b1dba20280" target="_self">Laboratuvar Envanteri</a></li><li><a href="/c335/yayinlar-projeler" target="_self">Yayınlar Projeler</a></li><li><a href="https://duzce.edu.tr/yayinlar" target="_self">Hakemli Dergiler</a></li><li><a href="/idari/tto" target="_self">Teknoloji Transfer Ofisi</a></li></ul></li>
+                    <li><a href="/49c5/htisaslasma" target="_self" class="has-submenu">İhtisaslaşma</a><ul class="submenu"><li><a href="/0ea5/program-kapsami" target="_self">Program Kapsamı</a></li><li><a href="/21d8/tibbi-bitki-yetistiriciligi" target="_self">Tıbbi Bitki Yetiştiriciliği</a></li><li><a href="/ea3a/urunlermarkalar" target="_self">Ürünler/Markalar</a></li><li><a href="/d210/uretim-merkezi" target="_self">Üretim Merkezi</a></li><li><a href="/321d/2021-yili-faaliyetleri" target="_self">Geleneksel ve Tamamlayıcı Tıp Faaliyetleri</a></li><li><a href="/601d/2021" target="_self">Tarımsal Atıkların Geri Kazanımı Faaliyetleri</a></li><li><a href="/e123/urunlerimiz" target="_self">Arıcılık / Arı Ürünleri</a></li><li><a href="/b4bb/bilimsel-yayinlar" target="_self">Bilimsel Yayınlar</a></li><li><a href="/d29e/s-birligi-protokolleri" target="_self">İşbirlikleri</a></li><li><a href="/c32d/etkinlikler" target="_self">Etkinlikler</a></li></ul></li>
+                    <li>
+                        <a href="/yayinlar">
+                            <span class="text-primary">DÜ</span>Yayınlar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/duyurular">
+                            <span class="text-primary">DÜ</span>Duyurular
+
+                        </a>
+                    </li>
+                    <li><a href="/c0ae/akademik-ve-dari-personel" target="_self">Personel</a></li>
+                    <li><a href="/05a6/ogrenci-bilgi-sayfasi" target="_self">Öğrenci</a></li>
+                    <li><a href="http://hastane.duzce.edu.tr/" target="_blank">Hastane</a></li>
+                    <li><a href="https://duzceteknopark.com.tr/" target="_blank">Teknopark</a></li>
+                    <li><a href="/6b61/hizli-erisim" target="_self" class="has-submenu">Hızlı Erişim</a><ul class="submenu"><li><a href="/6db5/e-posta" target="_self"><i class="fa fa-envelope"></i> E-posta</a></li><li><a href="https://ebys.duzce.edu.tr" target="_self">EBYS</a></li><li><a href="https://obs.duzce.edu.tr" target="_blank"><i class="fa fa-eye"></i> ÖBS / KBYS</a></li><li><a href="https://uzem.duzce.edu.tr" target="_blank"><i class="fa fa-chalkboard-teacher"></i> UZEM</a></li><li><a href="/idari/kutuphane" target="_self"><i class="fa fa-book-reader"></i> Kütüphane</a></li><li><a href="http://www.rehber.duzce.edu.tr" target="_blank"><i class="fa fa-phone-square"></i>  Rehber</a></li><li><a href="https://pbs.duzce.edu.tr" target="_blank"><i class="fa fa-calendar-check"></i> PBS</a></li><li><a href="/diger/sbs" target="_self"><i class="fa fa-clipboard"></i> Staj</a></li><li><a href="/1B29/yemek-menusu" target="_self"><i class="fa fa-utensils"></i> Yemek Menüsü</a></li><li><a href="http://www.havuz.duzce.edu.tr/" target="_self"><i class="fa fa-swimmer"></i>  Havuz</a></li><li><a href="/e27a/letisim" target="_self"><i class="fa fa-phone"></i> İletişim</a></li></ul></li>
+                    <li><a href="https://sanalsergi.duzce.edu.tr/" target="_self">Sanat Galerisi</a></li>
+                    <li><a href="https://mbs.duzce.edu.tr" target="_blank">Mezunlar</a></li>
+                    <li class="social">
+                        <ul>
+                            <li>
+                                <a href="https://www.instagram.com/duzceuniversite/" target="_blank">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/DuzceUniversite" target="_blank">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/duzceuniversite" target="_blank">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.duzce.edu.tr/13518-duyurus-universitemizde-whatsapp-bildirim-hatti-kuruldu" target="_blank">
+                                    <i class="fa fa-whatsapp"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.youtube.com/duzceuniversite" target="_blank">
+                                    <i class="fa fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        *@
+    </header>
+
+
+
+
+
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <br />
+    <br />
+    <br />
+    
+    
+@Html.Partial("_footer")
+    
+    
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/js/popper.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿@model IEnumerable<DUBitirmeTezi.Models.Duyurular>
+
+@foreach (var item in Model)
+{
+    <div class="info-container bx-clone" style="float: none; list-style: none; position: relative; width: 510px;" aria-hidden="true">
+        <div class="image">
+            <img src="@item.Url">
+        </div>
+        <div class="info-headline">
+            <div>
+                <a href="">
+                    @item.DuyuruAdi
+                </a>
+
+            </div>
+        </div>
+    </div>
+}

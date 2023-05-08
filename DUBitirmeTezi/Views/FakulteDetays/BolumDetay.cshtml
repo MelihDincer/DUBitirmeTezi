@@ -1,0 +1,35 @@
+﻿@model IEnumerable<DUBitirmeTezi.Models.Akademik.FakulteDetay>
+
+@{
+    ViewData["Title"] = "Bölüm Açıklamaları";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("_sayfaBaslik")
+
+@Html.Partial("_bolumDetay")
+
+
+
+
+@*@foreach (var item in Model)
+{
+    <h5>@item.EducationName</h5>
+    <br />
+    <p style="text-align:center ">
+        <img src="@item.Image" style="height:250px; width:100%;" />
+    </p>
+    <br />
+
+    <h4>Bölüm Hakkında Açıklama</h4>
+    <br />
+    <p>@item.Description</p>
+    <br />
+    <p>@item.Description2</p>
+    <br />
+    <h4>Misyonumuz</h4>
+    <p>@item.Mission</p>
+    <br />
+    <h4>Vizyonumuz</h4>
+    <p>@item.Vision</p>
+}*@

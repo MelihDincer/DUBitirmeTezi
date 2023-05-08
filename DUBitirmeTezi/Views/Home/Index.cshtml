@@ -1,0 +1,204 @@
+﻿@model DUBitirmeTezi.Models.IndexModel
+@{
+    ViewData["Title"] = "Anasayfa";
+}
+
+<section>
+    <div class="image-container">
+        <div class="headline">
+            <div class="animated fadeInLeftBig">
+                Değer Üreten<br>Üniversite
+            </div>
+        </div>
+        <div id="video-wrapper">
+            <video id="du-video" class="cover-image" autoplay="" loop="" muted="" playsinline="" preload="auto" title="Düzce Üniversitesi">
+                <source type="video/mp4" src="/Anasayfa/video.mp4">
+            </video>
+            <div id="video-controls">
+                <button type="button" id="play-pause"><p class="hidden">Durdur</p><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><title>Durdur</title><path d="M25,50A25.007,25.007,0,0,1,15.269,1.965,25.006,25.006,0,0,1,34.731,48.035,24.844,24.844,0,0,1,25,50Zm3.907-37.5a.71.71,0,0,0-.781.6V36.9a.71.71,0,0,0,.781.6h4.688a.71.71,0,0,0,.781-.6V13.1a.71.71,0,0,0-.781-.6Zm-12.5,0a.71.71,0,0,0-.781.6V36.9a.71.71,0,0,0,.781.6h4.688a.71.71,0,0,0,.781-.6V13.1a.71.71,0,0,0-.781-.6Z"></path></svg></button>
+            </div>
+        </div>
+    </div>
+    <div class="empty-image" onclick="location.href = '#'" style="cursor: pointer; background: url(https://cdn.duzce.edu.tr/File/GetFile/92354f8b-bfb8-462a-bd11-657f20f7bc42) repeat center center fixed;">
+    </div>
+</section>
+
+<div class="container">
+    <br />
+    <br />
+    <div class="container">
+        <p style="text-align:center; font-size:50px; font-family:Bahnschrift">Son Eklenen Duyurular</p>
+    </div>
+    <hr />
+    <div class="row">
+        @foreach (var item in Model.Duyurular)
+        {
+            <div class="col-md-3" style="margin:30px">
+                <div class="card" style="width: 18rem;">
+                    <img style="height:295px !important" class="card-img-top" src="@item.Url" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size:12px !important">@item.EklendigiTarih.ToShortDateString()</h5>
+                        <p class="card-text">@item.DuyuruAdi</p>
+                        <br />
+                        <a asp-route-id="@item.Id" asp-controller="Duyurulars" asp-action="Details" class="btn btn-primary">Devamını oku</a>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+
+@foreach (var item in Model.ProjeSayilari)
+{
+    <section id="headline-panel" class="">
+        <div class="wrapper flex container">
+
+            <h2>@item.Baslik</h2>
+
+            <p>@item.Aciklama</p>
+        </div>
+    </section>
+
+
+    <section class="stats stats-v1">
+        <div class="c-60 dn" style="background-image: url(/wwwroot/Anasayfa/headline-back-01.png);">
+            <img style="background-size: cover; width: 88%; display: initial " src="~/Anasayfa/headline-back-01.png" />
+        </div>
+        <div class="c-40">
+            <h2>2006'DAN BUGÜNE</h2>
+            <div class="r">
+                <div class="stats-content">
+
+                    <span class="stats-count">@item.Fakulte</span>
+
+                    <span class="stats-text">FAKÜLTE</span>
+                </div>
+                <div class="stats-content">
+
+                    <span class="stats-count">@item.Enstitu</span>
+                    <span class="stats-text">ENSTİTÜ</span>
+                </div>
+            </div>
+            <div class="r">
+                <div class="stats-content">
+
+                    <span class="stats-count">@item.Yuksekokul</span>
+
+                    <span class="stats-text">YÜKSEKOKUL</span>
+                </div>
+                <div class="stats-content">
+
+                    <span class="stats-count">@item.MeslekYuksekokulu</span>
+
+                    <span class="stats-text">MESLEK<br>YÜKSEKOKULU</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="stats stats-v2">
+        <div class="c-60 dn" style="background-image: url(/wwwroot/Anasayfa/headline-back-02.png);background-size: cover">
+            <img style="background-size: cover; width: 88%; display: initial " src="~/Anasayfa/headline-back-02.png" />
+        </div>
+        <div class="c-40">
+            <h2>2006'DAN BUGÜNE</h2>
+            <div class="r">
+                <div class="stats-content">
+
+                    <span class="stats-count">@item.LisansProgrami</span>
+
+                    <span class="stats-text">LİSANS PROGRAMI</span>
+                </div>
+                <div class="stats-content">
+
+                    <span class="stats-count">@item.LisansutsuProgrami</span>
+
+                    <span class="stats-text">LİSANSÜSTÜ PROGRAMI</span>
+                </div>
+            </div>
+            <div class="r">
+                <div class="stats-content">
+
+                    <span class="stats-count">@item.UygulamaArastirmaMerkezi</span>
+
+                    <span class="stats-text">UYGULAM ARAŞTIRMA MERKEZİ</span>
+                </div>
+                <div class="stats-content">
+                    <span class="stats-count">@item.Koordinatorluk</span>
+                    <span class="stats-text" style="font-size: 1.1vw;">KOORDİNATÖRLÜK</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="stats stats-v1">
+        <div class="c-60 dn" style="background-image: url(/wwwroot/Anasayfa/headline-back-03.png);">
+            <img style="background-size: cover; background-repeat:no-repeat; width: 88%; display: initial " src="~/Anasayfa/headline-back-03.png" />
+        </div>
+        <div class="c-40">
+            <h2>2006'DAN BUGÜNE</h2>
+            <div class="r">
+                <div class="stats-content">
+                    <span class="stats-count"> @item.TubitakProjesi </span>
+                    <span class="stats-text">TUBİTAK PROJESİ</span>
+                </div>
+                <div class="stats-content">
+                    <span class="stats-count"> @item.BapProjesi </span>
+                    <span class="stats-text">BAP PROJESİ</span>
+                </div>
+            </div>
+            <div class="r">
+                <div class="stats-content">
+                    <span class="stats-count"> @item.SponsorluProje </span>
+                    <span class="stats-text">SPONSORLU PROJE</span>
+                </div>
+                <div class="stats-content">
+                    <span class="stats-count"> @item.Patent </span>
+                    <span class="stats-text">PATENT</span>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+
+<section id="headline-footer">
+    <div class="wrapper flex container">
+        <div class="content">
+            <h3>KARINCALAR GİBİ OL...</h3><h2>ÇALIŞAN, ÜRETEN, GELİŞEN</h2><h3>DÜZCE ÜNİVERSİTEM</h3>
+            <div class="hr"></div>
+            <div class="sss-nav">
+                <div class="r">
+                    <a href="#">
+                        AÇIK KAMPÜS<span>'e Katıl</span>
+                        <br>
+                        NEDİR?
+                    </a>
+                    <a href="#">
+                        GETAT<span>'ı Gör</span>
+                        <br>
+                        NEDİR?
+                    </a>
+                </div>
+                <div class="r">
+                    <a href="#">
+                        DÜKKAN
+                        <span>
+                            'a Git
+                        </span>
+                        <br>
+                        NEDİR?
+                    </a>
+                    <a href="#">
+                        RADYO DÜET<span> Dinle</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

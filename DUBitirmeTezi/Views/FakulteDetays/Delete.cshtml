@@ -1,0 +1,56 @@
+﻿@model DUBitirmeTezi.Models.Akademik.FakulteDetay
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_admin.cshtml";
+}
+
+
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Fakulte)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Fakulte.FacultyName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EducationName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EducationName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Description2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mission)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mission)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vision)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vision)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="AdminPanel">Back to List</a>
+    </form>
+</div>

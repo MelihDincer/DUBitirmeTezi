@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Düzce Üniversitesi Admin Panel</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/Admin/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="/Admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="/Admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="/Admin/plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/Admin/dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="/Admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="/Admin/plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="/Admin/plugins/summernote/summernote-bs4.min.css">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader flex-column justify-content-center align-items-center">
+            <img class="animation__shake" src="/Anasayfa/logo.png" height="60" width="60">
+        </div>
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color:darkslategrey">
+            <!-- Brand Logo -->
+            <a href="#" class="brand-link">
+                <span  style="text-align:center" class="brand-text font-weight-light">Düzce Üni Admin Panel</span>
+            </a>
+            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+ 
+                <div class="info">
+                    <a href="#" style="text-decoration:none;color:whitesmoke" class="d-block">Melih Dinçer</a>
+                </div>
+            </div>
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <br />
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+                        <li class="nav-header">Anasayfa</li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa fa-paperclip"></i>
+                                <p>
+                                    Anasayfa Bilgileri
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview" style="display: none;">
+                                <li class="nav-item">
+                                    <a asp-controller="ProjeSayilaris" asp-route-id="1" asp-action="Details" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Anasayfa Verilerini Gör</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-controller="ProjeSayilaris" asp-route-id="1" asp-action="Edit" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Anasayfa Verilerini Düzenle</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-header">Üniversitemiz</li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa fa-person-booth"></i>
+                                <p>
+                                    Yönetim Bilgileri
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview" style="display: none;">
+                                <li class="nav-item">
+                                    <a asp-controller="Yonetims" asp-action="Index" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Ünvanlar</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-controller="YonetimDetays" asp-action="AdminPanel" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Yöneticiler</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a asp-controller="FotografGalerisis" asp-action="AdminPanel" class="nav-link">
+                                <i class="nav-icon fa fa-photo-video"></i>
+                                <p>
+                                    Fotoğraf Galerisi
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-header">Akademik</li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa fa-house-user"></i>
+                                <p>
+                                    Fakülte Bilgileri
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview" style="display: none;">
+                                <li class="nav-item">
+                                    <a asp-controller="Fakultes" asp-action="Index" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Fakülteler</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-controller="FakulteDetays" asp-action="AdminPanel" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Fakülteye Bağlı Bölümler</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa fa-home"></i>
+                                <p>
+                                    Enstitü Bilgileri
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview" style="display: none;">
+                                <li class="nav-item">
+                                    <a asp-controller="Enstitus" asp-action="Index" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Enstitüler</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-controller="EnstituDetays" asp-action="AdminPanel" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Enstitü Bilgileri</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa fa-school"></i>
+                                <p>
+                                    Yüksekokul Bilgileri
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview" style="display: none;">
+                                <li class="nav-item">
+                                    <a asp-controller="Yuksekokuls" asp-action="Index" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Yüksekokullar</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-controller="YuksekokulDetays" asp-action="AdminPanel" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Yüksekokul Bilgileri</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa fa-school"></i>
+                                <p>
+                                    MeslekYüksekokul Bilgileri
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview" style="display: none;">
+                                <li class="nav-item">
+                                    <a asp-controller="MeslekYuksekokulus" asp-action="Index" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Meslek Yüksekokulları</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-controller="MeslekYuksekokuluDetays" asp-action="AdminPanel" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Meslek Yüksekokul Bilgileri</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a asp-controller="Duyurulars" asp-action="AdminPanel" class="nav-link">
+                                <i class="nav-icon fa fa-anchor"></i>
+                                <p>
+                                    Duyurular
+                                </p>
+                            </a>
+                        </li>
+
+
+
+                        <li class="nav-item">
+                            <a asp-controller="Login" asp-action="CikisYap" class="nav-link">
+                                <i class="nav-icon fa fa-sign-out-alt"></i>
+                                <p>
+                                    Çıkış Yap
+                                </p>
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>YetkiliGirisis
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper" style="margin-top:-24px">
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid ml-2">
+                        <br />
+                        <br />
+                        @RenderBody()
+
+                    </div>
+                </div>
+                    <!-- Small boxes (Stat box) -->
+
+                </div><!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <footer class="main-footer">
+        </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <div class="scriptler">
+        <!-- ./wrapper -->
+        <!-- jQuery -->
+        <script src="/Admin/plugins/jquery/jquery.min.js"></script>
+        <!-- jQuery UI 1.11.4 -->
+        <script src="/Admin/plugins/jquery-ui/jquery-ui.min.js"></script>
+        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+        <script>
+            $.widget.bridge('uibutton', $.ui.button)
+        </script>
+        <!-- Bootstrap 4 -->
+        <script src="/Admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- ChartJS -->
+        <script src="/Admin/plugins/chart.js/Chart.min.js"></script>
+        <!-- Sparkline -->
+        <script src="/Admin/plugins/sparklines/sparkline.js"></script>
+        <!-- JQVMap -->
+        <script src="/Admin/plugins/jqvmap/jquery.vmap.min.js"></script>
+        <script src="/Admin/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+        <!-- jQuery Knob Chart -->
+        <script src="/Admin/plugins/jquery-knob/jquery.knob.min.js"></script>
+        <!-- daterangepicker -->
+        <script src="/Admin/plugins/moment/moment.min.js"></script>
+        <script src="/Admin/plugins/daterangepicker/daterangepicker.js"></script>
+        <!-- Tempusdominus Bootstrap 4 -->
+        <script src="/Admin/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+        <!-- Summernote -->
+        <script src="/Admin/plugins/summernote/summernote-bs4.min.js"></script>
+        <!-- overlayScrollbars -->
+        <script src="/Admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="/Admin/dist/js/adminlte.js"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="/Admin/dist/js/demo.js"></script>
+        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+        <script src="/Admin/dist/js/pages/dashboard.js"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+
+    </div>
+</body>
+</html>
